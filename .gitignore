@@ -1,13 +1,11 @@
 # игнорировать все файлы
 **
+!.gitignore
 
 # кроме папок с лабораторными
 !Lab[1-7]
 
-# все файлы, кроме .py и .txt
+# все файлы, кроме .py .txt .md
 !**.py
 !**.txt
-
-# и кроме README и .gitignore
-!README.md
-!.gitignore
+!**.md
