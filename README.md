@@ -1,6 +1,6 @@
 # University Labs
 
-## 1. Sorting methods
+## 1. [Sorting methods](Lab1/readme.md)
 
 > Main types of sorting
 
