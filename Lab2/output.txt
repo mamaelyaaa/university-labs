@@ -1,0 +1,5 @@
+Method right rectangle:  res =  0.117562, n = 40, h = 0.03
+Method left rectangle:   res =  0.117715, n = 40, h = 0.03
+Method middle rectangle: res =  0.117456, n = 40, h = 0.03
+Method trapeze:          res =  0.117638, n = 40, h = 0.03
+Method simpson:          res =  0.117517, n = 40, h = 0.02

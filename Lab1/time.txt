@@ -1,0 +1,4 @@
+Simple time:  0.92 sec
+Bubble time:  5.82 sec
+Comb time:  0.04 sec
+Shaker time:  3.23 sec

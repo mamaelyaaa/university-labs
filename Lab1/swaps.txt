@@ -1,0 +1,4 @@
+Simple swaps_count: 4018
+Bubble swaps_count: 25100987
+Comb swaps_count: 59685
+Shaker swaps_count: 25100987
