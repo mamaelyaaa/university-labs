@@ -23,7 +23,9 @@
 
 ---
 
-## 3. Differencial methods 
+## 3. [Differencial methods](Lab3/readme.md)
+
+> Various differencial methods
 
 - Euler's Method 
 - Modified Euler's method 
