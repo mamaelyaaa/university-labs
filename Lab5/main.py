@@ -1,7 +1,3 @@
-def finding_dependence(x: float, b1: float, b2: float) -> float:
-    return b1 + b2 * x
-
-
 def method_mnk(x: list, y: list) -> None:
     n: int = len(x)
 
@@ -32,6 +28,10 @@ def method_mnk(x: list, y: list) -> None:
     print(f'R = {pow(numerator / denominator, 0.5):.5f}')
 
 
+def finding_dependence(x: float, b1: float, b2: float) -> float:
+    return b1 + b2 * x
+
+
 def method_gauss(slay_arr: list) -> list[int]:
     n: int = len(slay_arr)
 
@@ -48,8 +48,10 @@ def method_gauss(slay_arr: list) -> list[int]:
                 slay_arr[k][j] -= factor * slay_arr[i][j]
 
     x = [0] * n
+
     for i in range(n - 1, -1, -1):
         x[i] = slay_arr[i][-1]
+
         for j in range(i + 1, n):
             x[i] -= slay_arr[i][j] * x[j]
 

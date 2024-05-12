@@ -38,7 +38,7 @@ def method_golden_section() -> None:
             x1 = b - (b - a) / golden_ratio
             x2 = a + (b - a) / golden_ratio
 
-        print(f'Метод золотого сечения: {(a + b) / 2}', file=output_file)
+        print(f'Метод золотого сечения: {(a + b) / 2:.5f}', file=output_file)
 
 
 def method_polyline() -> None:
