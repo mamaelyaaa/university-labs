@@ -34,25 +34,28 @@
 
 ---
 
-## 4. System of linear equations
+## 4. [System of linear equations](Lab4/readme.md)
+
+> Various methods of system of linear equations
 
 - Gauss method
 - Gauss-Seidel method
 
 ---
 
-## 5. Ordinary least squares (OLS) methods
+## 5. [Ordinary least squares (OLS) methods](Lab5/readme.md)
+
+> Different approximates of OLS method (Метод наменьших квадратов) 
 
 - Least squares method
-
+  - Quadratic function
+  - Linear function  
 ---
 
-## 6. Monte Carlo's method
+## 6. [Monte Carlo's method](Lab6/readme.md)
 
-
+> Computational technique that utilizes random sampling to approximate solutions to mathematical problems or simulate complex systems.
 
 ---
 
 ## 7. Optimization methods
-
-- 
