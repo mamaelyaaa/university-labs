@@ -1,0 +1,7 @@
+Method MNK (quadratic): y = 89.0748x^2 + 10.7515x -52.6212
+R = 0.53786
+Approximate error: 355.63%
+
+Method MNK (linear):    y = -101.863x + 27.887
+R = 0.48393
+Approximate error: 612.37%
