@@ -12,11 +12,11 @@ def f(x: float) -> float:
     return x ** 2 + 1 / atan(x)
 
 
-def f1(x: float) -> float:
+def df(x: float) -> float:
     return 2 * x - 1 / ((x ** 2 + 1) * atan(x) ** 2)
 
 
-def f2(x: float) -> float:
+def d2f(x: float) -> float:
     return 2 + 2 * x * atan(x) + 2 / ((x ** 4 + 2 * x ** 2 + 1) * atan(x) ** 3)
 
 
@@ -50,10 +50,10 @@ def method_tangents() -> None:
         x0: float = (A + B) / 2
 
         while abs(f(x0)) >= E:
-            x1 = x0 - f(x0) / f1(x0)
+            x1 = x0 - f(x0) / df(x0)
             x0 = x1
 
-        print(f'Метод касательных: {x0}', file=output_file)
+        print(f'Метод касательных:     {x0:.5f}', file=output_file)
 
 
 def method_Newton() -> None:
