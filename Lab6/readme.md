@@ -12,7 +12,6 @@ def f(x: float, y: float) -> bool:
 2. Init borders
 
 ```python
-# Обозначим границы
 x_left, x_right = -1, 1
 y_left, y_right = -1, 1
 ```

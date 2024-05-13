@@ -45,7 +45,7 @@
 
 ## 5. [Ordinary least squares (OLS) methods](Lab5/readme.md)
 
-> Different approximates of OLS method (Метод наменьших квадратов) 
+> Different approximates of OLS method
 
 - Least squares method
   - Quadratic function
