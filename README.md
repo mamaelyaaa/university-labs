@@ -58,4 +58,9 @@
 
 ---
 
-## 7. Optimization methods
+## 7. [Optimization methods](Lab7/readme.md)
+
+- Golden section method
+- Polyline method
+- Tangents method 
+- Newton method
