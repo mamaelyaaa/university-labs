@@ -43,7 +43,7 @@
 
 ---
 
-## 5. [Ordinary least squares (OLS) methods](Lab5/readme.md)
+## 5. [Ordinary least squares (OLS) methods](Lab5)
 
 > Different approximates of OLS method
 
