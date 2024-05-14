@@ -60,6 +60,8 @@
 
 ## 7. [Optimization methods](Lab7/readme.md)
 
+> Various optimisation methods
+
 - Golden section method
 - Polyline method
 - Tangents method 
