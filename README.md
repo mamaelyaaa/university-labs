@@ -1,6 +1,6 @@
 # University Labs
 
-## 1. [Sorting methods](Lab1/readme.md)
+## 1. [Sorting methods](Lab1)
 
 > Main types of sorting
 
@@ -11,7 +11,7 @@
 
 ---
 
-## 2. [Integral methods](Lab2/readme.md)
+## 2. [Integral methods](Lab2)
 
 > Various integration methods
 
@@ -23,7 +23,7 @@
 
 ---
 
-## 3. [Differencial methods](Lab3/readme.md)
+## 3. [Differencial methods](Lab3)
 
 > Various differencial methods
 
@@ -34,7 +34,7 @@
 
 ---
 
-## 4. [System of linear equations](Lab4/readme.md)
+## 4. [System of linear equations](Lab4)
 
 > Various methods of system of linear equations
 
@@ -52,13 +52,13 @@
   - Linear function  
 ---
 
-## 6. [Monte Carlo's method](Lab6/readme.md)
+## 6. [Monte Carlo's method](Lab6)
 
 > Computational technique that utilizes random sampling to approximate solutions to mathematical problems or simulate complex systems.
 
 ---
 
-## 7. [Optimization methods](Lab7/readme.md)
+## 7. [Optimization methods](Lab7)
 
 > Various optimisation methods
 
