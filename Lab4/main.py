@@ -56,7 +56,7 @@ def method_gauss_zeidel() -> None:
     n: int = read_file()[1]
 
     x = [0] * n  # Начальное приближение
-    tol = 1e-6
+    tol = 0.0001
 
     with open('answer_data.txt', 'a') as output_file:
         flag = 0

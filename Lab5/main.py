@@ -1,4 +1,4 @@
-def method_mnk_quadratic(x_exp: list[float], y_exp: list[float]) -> None:
+def method_mnk(x_exp: list[float], y_exp: list[float]) -> None:
     def quadratic_func(x: float, a: float, b: float, c: float) -> float:
         return a * x ** 2 + b * x + c
 
@@ -48,10 +48,8 @@ def method_mnk_quadratic(x_exp: list[float], y_exp: list[float]) -> None:
         slay[2] = [sum_x4, sum_x3, sum_x2, sum_x2y]
 
         # Нахождение коэффицента детерминации R
-        y_bar = 1 / n * sum_y
-
         sum_e = sum((y_exp[i] - quadratic_func(x_exp[i], *method_gauss(slay))) ** 2 for i in range(n))
-        sum_y_bar = sum((y_exp[i] - y_bar) ** 2 for i in range(n))
+        sum_y_bar = sum((y_exp[i] - 1 / n * sum_y) ** 2 for i in range(n))
         r = pow(1 - sum_e / sum_y_bar, 2)
 
         # Нахождение средней ошибки аппроксимации
@@ -63,7 +61,7 @@ def method_mnk_quadratic(x_exp: list[float], y_exp: list[float]) -> None:
         print(f'Approximate error: {a:.2%}\n', file=out_file)
 
 
-def method_mnk_linear(x_exp: list[float], y_exp: list[float]) -> None:
+def method_linear_regression(x_exp: list[float], y_exp: list[float]) -> None:
 
     def linear_func(x: float, b: float, k: float) -> float:
         return b + k * x
@@ -102,8 +100,8 @@ def main() -> str | int:
     except FileNotFoundError:
         return 'Не удалось открыть файл'
 
-    method_mnk_quadratic(x, y)
-    method_mnk_linear(x, y)
+    method_mnk(x, y)
+    method_linear_regression(x, y)
 
     return 0
 
