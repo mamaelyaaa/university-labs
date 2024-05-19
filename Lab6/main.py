@@ -1,7 +1,8 @@
 from random import uniform
+from math import pi
 
 
-def monte_carlo(n: int) -> float:
+def monte_carlo(n: int) -> str:
     """Находим число pi, через площадь круга с радиусом 1"""
 
     m: int = 0  # Счетчик точек которые попали в фигуру
@@ -21,7 +22,7 @@ def monte_carlo(n: int) -> float:
 
     s: float = a ** 2 * (m / n)
 
-    return s
+    return f'{s: 7f}, погрешность {abs(s - pi): .4f}'
 
 
 def f(x: float, y: float) -> bool:
@@ -30,7 +31,7 @@ def f(x: float, y: float) -> bool:
 
 def main() -> int:
     with open('data.txt', 'w') as data_file:
-        n: list[int] = [5000, 1000, 25000, 50000, 100_000, 200_000, 500_000, 1_000_000]
+        n: list[int] = [5000, 10000, 25000, 50000, 100_000, 200_000, 500_000, 1_000_000]
 
         for i in n:
             print(f'{i} {monte_carlo(i)}', file=data_file)
