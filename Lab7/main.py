@@ -46,15 +46,15 @@ def method_golden_section() -> None:
 
 
 def method_polyline() -> None:
+
     def delta(l: float, x: float, p: float) -> float:
         return 1 / (2 * l) * (f(x) - p)
 
     with open('output.txt', 'a', encoding='utf-8') as output_file:
-        # Находим константу Липшица
         L = 0
         h = 0.0001
 
-        for x in range(B, A, -1):
+        for x in range(int(B), int(A), -1):
             L = max(abs((f(x + h) - f(x)) / h), L)
 
         x: float = 1 / (2 * L) * (f(B) + L * (A + B))
@@ -79,7 +79,10 @@ def method_polyline() -> None:
 
 def method_tangents() -> None:
     with open('output.txt', 'a', encoding='utf-8') as output_file:
-        x0 = B  # Если не выдает ошибку, взять другую границу
+        x0 = A
+        if x0 == 0:
+            x0 = B
+
         x1 = x0 - f(x0) / df(x0)
 
         while abs(x1 - x0) < E:
@@ -91,7 +94,9 @@ def method_tangents() -> None:
 
 def method_Newton() -> None:
     with open('output.txt', 'a', encoding='utf-8') as output_file:
-        x0 = B
+        x0 = A
+        if x0 == 0:
+            x0 = B
 
         while abs(df(x0)) > E:
             x1 = x0 - (df(x0) / d2f(x0))

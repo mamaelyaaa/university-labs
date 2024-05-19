@@ -43,13 +43,12 @@
 
 ---
 
-## 5. [Ordinary least squares (OLS) methods](Lab5)
+## 5. [Approximate methods](Lab5)
 
-> Different approximates of OLS method
+> Different approximates methods
 
 - Least squares method
-  - Quadratic function
-  - Linear function  
+- Method linear regression 
 ---
 
 ## 6. [Monte Carlo's method](Lab6)

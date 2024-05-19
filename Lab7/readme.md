@@ -33,10 +33,10 @@ answer: float = 0.757
 
 For the very first point **x0** we take either the **beginning A** or the **end B**. This depends on the increase or decrease of the function, as well as in which direction the function is convex.
 
-1. In `method_polyline()` 
+In `method_polyline()` 
 
 Line 57
-```text
+```python
 for x in range(B, A, -1):
 
 # for x in range(A, B):
@@ -44,28 +44,10 @@ for x in range(B, A, -1):
 
 Lines 60-61
 
-```text
+```python
 x: float = 1 / (2 * L) * (f(B) + L * (A + B))
 p: float = (f(B) + L * (A - B)) / 2
 
 # x: float = 1 / (2 * L) * (f(a) - f(B) + L * (A + B))
 # p: float = (f(a) + f(B) + L * (A - B)) / 2
-```
-
-2. In `method_tangents()`
-
-Line 82
-
-```text
-x0 = B
-# x0 = A
-```
-
-3. In `method_Newton()`
-
-Line 94
-
-```text
-x0 = B
-# x0 = A
 ```
