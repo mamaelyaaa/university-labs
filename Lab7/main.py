@@ -46,7 +46,6 @@ def method_golden_section() -> None:
 
 
 def method_polyline() -> None:
-
     def delta(l: float, x: float, p: float) -> float:
         return 1 / (2 * l) * (f(x) - p)
 
@@ -105,12 +104,29 @@ def method_Newton() -> None:
         print(f'Метод Ньютона:          {x0:.5f}, погрешность: {abs(answer - x0):.5f}', file=output_file)
 
 
+def method_dichotomy() -> None:
+    with open('output.txt', 'a', encoding='utf-8') as output_file:
+        a, b = A, B
+        while abs(b - a) / 2 > E:
+            x0 = (a + b) / 2
+            left = x0 - E / 2
+            right = x0 + E / 2
+
+            if f(left) < f(right):
+                b = right
+            else:
+                a = left
+
+        print(f'\nМетод дихотомии:        {(a + b) / 2:.5f}, погрешность: {abs(answer - (a + b) / 2):.5f}',
+              file=output_file)
+
+
 def main() -> None:
     method_golden_section()
     method_polyline()
     method_tangents()
     method_Newton()
-    pass
+    method_dichotomy()
 
 
 if __name__ == '__main__':

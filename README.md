@@ -66,3 +66,4 @@
 - Polyline method
 - Tangents method 
 - Newton method
+- Dichotomy method
