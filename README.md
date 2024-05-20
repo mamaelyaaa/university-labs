@@ -20,17 +20,18 @@
 - Method middle rectangle
 - Method trapeze
 - Method Simpson
+- Method Gauss-Quadrature
 
 ---
 
 ## 3. [Differencial methods](Lab3)
 
-> Various differencial methods
+> Various differential methods
 
 - Euler's Method 
 - Modified Euler's method 
 - Improved Euler's method
-- Runge Kutt's method (with 6 coefficients)
+- Runge Kutta's method (with 6 coefficients)
 
 ---
 

@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+
+import numpy as np
+
+
 A: float = -0.4  # Left border
 B: float = 0.8  # Right border
 E: float = 0.0001
@@ -114,6 +119,21 @@ def method_simpson() -> None:
               file=outputFile)
 
 
+def method_gauss_quadrature() -> None:
+    with open('output.txt', 'a') as outputFile:
+        n = 20
+        # Получение узлов и весов для полиномов Лежандра
+        x, w = np.polynomial.legendre.leggauss(n)
+
+        # Преобразование узлов на интервал [a, b]
+        t = 0.5 * (x + 1) * (B - A) + A
+
+        res_integral = 0.5 * (B - A) * sum(w * f(t))
+
+        print(f'Method Gauss-Quadrature: res = {res_integral: .6f}, {n = }',
+              file=outputFile)
+
+
 def f(x: float) -> float:
     return x ** 2 / (4 * x ** 3 + 1)
 
@@ -124,6 +144,7 @@ def main() -> int:
     method_middle_rectangle()
     method_trapeze()
     method_simpson()
+    method_gauss_quadrature()
     return 0
 
 
