@@ -30,6 +30,7 @@ def method_right_rectangle() -> None:
             sum2 = sum1
 
         print(f'Method right rectangle:  res = {sum1: 2.6f}, {n = }, {h = :.2f}', file=outputFile)
+        print(f'Погрешность: {abs(sum1 - expectedIntegralRes): .8f}', file=outputFile)
 
 
 def method_left_rectangle() -> None:
@@ -52,6 +53,7 @@ def method_left_rectangle() -> None:
             sum2 = sum1
 
         print(f'Method left rectangle:   res = {sum1: .6f}, {n = }, {h = :.2f}', file=outputFile)
+        print(f'Погрешность: {abs(sum1 - expectedIntegralRes): .8f}', file=outputFile)
 
 
 def method_middle_rectangle() -> None:
@@ -73,6 +75,7 @@ def method_middle_rectangle() -> None:
                 sum1 += h * f(A + (2 * i + 1) / 2 * h)
             sum2 = sum1
         print(f'Method middle rectangle: res = {sum1: .6f}, {n = }, {h = :.2f}', file=outputFile)
+        print(f'Погрешность: {abs(sum1 - expectedIntegralRes): .8f}', file=outputFile)
 
 
 def method_trapeze() -> None:
@@ -94,6 +97,7 @@ def method_trapeze() -> None:
                 sum1 += h * ((f(A + i * h) + f(A + (i + 1) * h)) / 2)
             sum2 = sum1
         print(f'Method trapeze:          res = {sum1: .6f}, {n = }, {h = :.2f}', file=outputFile)
+        print(f'Погрешность: {abs(sum1 - expectedIntegralRes): .8f}', file=outputFile)
 
 
 def method_simpson() -> None:
@@ -117,6 +121,7 @@ def method_simpson() -> None:
 
         print(f'Method simpson:          res = {sum1: .6f}, {n = }, {h = :.2f}',
               file=outputFile)
+        print(f'Погрешность: {abs(sum1 - expectedIntegralRes): .8f}', file=outputFile)
 
 
 def method_gauss_quadrature() -> None:
@@ -132,6 +137,7 @@ def method_gauss_quadrature() -> None:
 
         print(f'Method Gauss-Quadrature: res = {res_integral: .6f}, {n = }',
               file=outputFile)
+        print(f'Погрешность: {abs(res_integral - expectedIntegralRes): .8f}', file=outputFile)
 
 
 def f(x: float) -> float:

@@ -1,6 +1,12 @@
 Method right rectangle:  res =  0.117562, n = 40, h = 0.03
+Погрешность:  0.00004521
 Method left rectangle:   res =  0.117715, n = 40, h = 0.03
+Погрешность:  0.00019761
 Method middle rectangle: res =  0.117456, n = 40, h = 0.03
+Погрешность:  0.00006115
 Method trapeze:          res =  0.117638, n = 40, h = 0.03
+Погрешность:  0.00012141
 Method simpson:          res =  0.117517, n = 40, h = 0.02
+Погрешность:  0.00000029
 Method Gauss-Quadrature: res =  0.117517, n = 20
+Погрешность:  0.00000034
