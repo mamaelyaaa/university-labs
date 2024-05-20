@@ -40,6 +40,7 @@
 
 - Gauss method
 - Gauss-Seidel method
+- Kramer method
 
 ---
 

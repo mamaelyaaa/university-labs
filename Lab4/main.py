@@ -1,3 +1,6 @@
+import numpy as np
+
+
 EXP_ANS: dict = {'a': -43.24231639,
                  'b': -3.197390354,
                  'c': -43.80095293,
@@ -84,9 +87,39 @@ def method_gauss_zeidel() -> None:
         print(f'\nmax {error = : .10f}', file=output_file)
 
 
+def method_kramer() -> None:
+
+    with open('answer_data.txt', 'a') as output_file:
+        matrix: list = read_file()[0]
+        n: int = read_file()[1]
+        error: float = 0
+
+        matrix_det = np.linalg.det([i[:-1] for i in matrix])  # Детерминант матрицы А
+
+        matrix_a = list(i[:-1] for i in matrix)
+        matrix_b = list(i[-1] for i in matrix)
+        x = []
+
+        for i in range(n):
+            new_matrix = np.copy(matrix_a)
+            new_matrix[:, i] = matrix_b
+            new_matrix_det = np.linalg.det(new_matrix)
+
+            x.append(new_matrix_det / matrix_det)
+
+        print('\nMethod Kramer:       ', file=output_file, end=' ')
+
+        for key, value in zip('abcde', x):
+            print(f'{key} = {value: .4f}', file=output_file, end=' ')
+            error = max(error, abs(value - EXP_ANS[key]))
+
+        print(f'\nmax {error = : .10f}', file=output_file)
+
+
 def main() -> int:
     method_gauss()
     method_gauss_zeidel()
+    method_kramer()
     return 0
 
 
