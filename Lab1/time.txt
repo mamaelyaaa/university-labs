@@ -1,4 +1,4 @@
-Simple time:  0.92 sec
-Bubble time:  5.82 sec
-Comb time:  0.04 sec
-Shaker time:  3.23 sec
+Время выполнения алгоритма: 0.97207 секунд (Simple sort)
+Время выполнения алгоритма: 6.54526 секунд (Bubble sort)
+Время выполнения алгоритма: 0.03100 секунд (Comb sort)
+Время выполнения алгоритма: 0.00100 секунд (Shaker sort)
